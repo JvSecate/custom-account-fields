@@ -46,3 +46,17 @@
         margin-left: 0 !important;
     }
 }
+
+.custom-account-fields-error {
+    display: block;
+    margin-top: 6px;
+    color: #8a1f2d;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.custom-account-fields-invalid input,
+.custom-account-fields-invalid select,
+.custom-account-fields-invalid textarea {
+    border-color: #8a1f2d !important;
+}
