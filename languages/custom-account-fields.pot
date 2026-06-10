@@ -1,0 +1,199 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Account Fields 0.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-10 00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: custom-account-fields\n"
+
+msgid "%s must be a valid phone number (example: (11) 91234-5678)."
+msgstr ""
+
+msgid "%s must be a valid CPF."
+msgstr ""
+
+msgid "%s must be a valid CNPJ."
+msgstr ""
+
+msgid "%s must be a valid CPF or CNPJ."
+msgstr ""
+
+msgid "%s must be a valid email address."
+msgstr ""
+
+msgid "%s must be a valid URL."
+msgstr ""
+
+msgid "%s must be a valid postal code (example: 01310-100)."
+msgstr ""
+
+msgid "%s has an invalid format."
+msgstr ""
+
+msgid "%s is invalid."
+msgstr ""
+
+msgid "Account Fields"
+msgstr ""
+
+msgid "You do not have permission to manage account fields."
+msgstr ""
+
+msgid "Full (100%)"
+msgstr ""
+
+msgid "Half (50%)"
+msgstr ""
+
+msgid "Third (33%)"
+msgstr ""
+
+msgid "Two thirds (66%)"
+msgstr ""
+
+msgid "Quarter (25%)"
+msgstr ""
+
+msgid "Three quarters (75%)"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Brazilian phone"
+msgstr ""
+
+msgid "CPF"
+msgstr ""
+
+msgid "CNPJ"
+msgstr ""
+
+msgid "CPF / CNPJ"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "URL"
+msgstr ""
+
+msgid "CEP"
+msgstr ""
+
+msgid "Custom regex"
+msgstr ""
+
+msgid "Configure account fields for registration, account editing, and admin user profiles."
+msgstr ""
+
+msgid "Fields saved successfully. Missing user values were filled with each field default."
+msgstr ""
+
+msgid "Fields imported successfully. Missing user values were filled with each field default."
+msgstr ""
+
+msgid "The JSON import failed. Check that the file is valid JSON and contains field definitions."
+msgstr ""
+
+msgid "Add field"
+msgstr ""
+
+msgid "Save fields"
+msgstr ""
+
+msgid "Fields not enabled for registration or account editing stay private to the admin user profile UI."
+msgstr ""
+
+msgid "Import fields from JSON"
+msgstr ""
+
+msgid "Import replaces the current field configuration. Existing user values are not overwritten; missing values receive the imported default value."
+msgstr ""
+
+msgid "Import JSON"
+msgstr ""
+
+msgid "Remove this field?"
+msgstr ""
+
+msgid "(new field)"
+msgstr ""
+
+msgid "Drag"
+msgstr ""
+
+msgid "Remove field"
+msgstr ""
+
+msgid "Key (meta key)"
+msgstr ""
+
+msgid "Unique identifier used to save the user meta value. Example: is_affiliated."
+msgstr ""
+
+msgid "Label"
+msgstr ""
+
+msgid "Affiliated"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Default value"
+msgstr ""
+
+msgid "Applied to new users and to existing users that do not yet have this meta key. For checkboxes, use 1 or 0."
+msgstr ""
+
+msgid "Validation"
+msgstr ""
+
+msgid "Regex"
+msgstr ""
+
+msgid "Error message"
+msgstr ""
+
+msgid "Placeholder"
+msgstr ""
+
+msgid "Autocomplete"
+msgstr ""
+
+msgid "Select options"
+msgstr ""
+
+msgid "Display in"
+msgstr ""
+
+msgid "Required"
+msgstr ""
+
+msgid "Registration"
+msgstr ""
+
+msgid "Account editing"
+msgstr ""
+
+msgid "Admin user profile"
+msgstr ""
+
+msgid "Additional information"
+msgstr ""
+
+msgid "Custom account fields"
+msgstr ""
+
+msgid "Select"
+msgstr ""
+
+msgid "%s is required."
+msgstr ""
+

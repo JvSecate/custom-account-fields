@@ -1,0 +1,52 @@
+{
+  "fields": [
+    {
+      "key": "billing_phone",
+      "label": "Phone",
+      "type": "tel",
+      "size": "half",
+      "required": "1",
+      "register": "1",
+      "account": "1",
+      "admin": "1",
+      "default_value": "",
+      "placeholder": "",
+      "autocomplete": "tel",
+      "options": "",
+      "validation": "phone_br",
+      "validation_message": ""
+    },
+    {
+      "key": "is_affiliated",
+      "label": "Affiliated",
+      "type": "checkbox",
+      "size": "full",
+      "required": "0",
+      "register": "0",
+      "account": "0",
+      "admin": "1",
+      "default_value": "0",
+      "placeholder": "",
+      "autocomplete": "",
+      "options": "",
+      "validation": "",
+      "validation_message": ""
+    },
+    {
+      "key": "is_reseller",
+      "label": "Reseller",
+      "type": "checkbox",
+      "size": "full",
+      "required": "0",
+      "register": "0",
+      "account": "0",
+      "admin": "1",
+      "default_value": "0",
+      "placeholder": "",
+      "autocomplete": "",
+      "options": "",
+      "validation": "",
+      "validation_message": ""
+    }
+  ]
+}

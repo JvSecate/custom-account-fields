@@ -1,0 +1,76 @@
+#caf-wrap { max-width: 1200px; }
+#caf-wrap .caf-header { display:flex; align-items:center; gap:12px; margin-bottom:4px; }
+#caf-wrap .caf-header h1 { margin:0; }
+#caf-wrap .caf-badge { background:#7f54b3; color:#fff; font-size:11px; font-weight:600;
+    padding:2px 8px; border-radius:20px; vertical-align:middle; }
+#caf-wrap .caf-desc { color:#666; margin-bottom:20px; }
+
+/* Cards layout */
+#caf-fields-list { display:flex; flex-direction:column; gap:16px; margin-bottom:20px; }
+.caf-field-card { background:#fff; border:1px solid #ddd; border-radius:6px;
+    box-shadow:0 1px 3px rgba(0,0,0,.06); overflow:hidden; }
+.caf-field-card-header { display:flex; align-items:center; gap:10px;
+    padding:12px 16px; background:#fafafa; border-bottom:1px solid #eee; cursor:pointer; }
+.caf-field-card-header .caf-drag { color:#aaa; cursor:grab; font-size:18px; line-height:1; }
+.caf-field-card-header .caf-card-title { flex:1; font-weight:600; font-size:13px; }
+.caf-field-card-header .caf-card-meta { color:#888; font-size:12px; }
+.caf-field-card-header .caf-toggle { color:#666; font-size:18px; transition:transform .2s; }
+.caf-field-card.is-collapsed .caf-toggle { transform:rotate(-90deg); }
+.caf-field-card-body { padding:16px; display:grid;
+    grid-template-columns:1fr 1fr 1fr; gap:12px 20px; }
+.caf-field-card.is-collapsed .caf-field-card-body { display:none; }
+
+/* Form groups */
+.caf-form-group { display:flex; flex-direction:column; gap:4px; }
+.caf-form-group.span-2 { grid-column:span 2; }
+.caf-form-group.span-3 { grid-column:span 3; }
+.caf-form-group label { font-size:12px; font-weight:600; color:#333; display:flex; align-items:center; gap:4px; }
+.caf-form-group input[type=text],
+.caf-form-group input[type=url],
+.caf-form-group select,
+.caf-form-group textarea { width:100%; box-sizing:border-box; }
+.caf-form-group textarea { resize:vertical; min-height:60px; }
+
+/* Checkbox groups */
+.caf-checks { display:flex; gap:12px; flex-wrap:wrap; align-items:center; padding-top:4px; }
+.caf-checks label { font-weight:400 !important; display:flex; align-items:center; gap:4px; cursor:pointer; }
+
+/* Tooltip */
+.caf-tip { position:relative; display:inline-flex; align-items:center; cursor:help;
+    color:#999; font-size:13px; font-weight:400; }
+.caf-tip::after { content:attr(data-tip); position:absolute; left:50%; transform:translateX(-50%);
+    bottom:calc(100% + 6px); background:#1d2327; color:#fff; font-size:11px; font-weight:400;
+    line-height:1.5; padding:6px 10px; border-radius:4px; white-space:pre-line;
+    width:220px; pointer-events:none; opacity:0; transition:opacity .15s; z-index:9999; }
+.caf-tip:hover::after { opacity:1; }
+
+/* Size preview */
+.caf-size-preview { display:flex; gap:3px; align-items:center; margin-top:4px; height:8px; }
+.caf-size-preview span { height:8px; border-radius:2px; background:#7f54b3; opacity:.25; flex:1; }
+.caf-size-preview span.active { opacity:1; }
+
+/* Remove button */
+.caf-field-card-header .button-link-delete { color:#b32d2e; }
+
+/* Validation conditional row */
+.caf-regex-row { display:none; }
+.caf-regex-row.visible { display:flex; }
+
+/* Footer row */
+.caf-footer { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.caf-key-hint { color:#888; font-size:12px; }
+
+@media(max-width:900px){
+    .caf-field-card-body { grid-template-columns:1fr 1fr; }
+    .caf-form-group.span-3 { grid-column:span 2; }
+}
+@media(max-width:600px){
+    .caf-field-card-body { grid-template-columns:1fr; }
+    .caf-form-group.span-2,.caf-form-group.span-3 { grid-column:span 1; }
+}
+
+/* Import box */
+.caf-import-box { margin-top:20px; padding:16px; background:#fff; border:1px solid #ddd; border-radius:6px; }
+.caf-import-box h2 { margin-top:0; }
+.caf-import-box p { color:#666; max-width:760px; }
+.caf-import-box input[type=file] { margin-right:10px; }
