@@ -1,5 +1,35 @@
 {
   "fields": [
+        {
+      "key": "first_name",
+      "label": "First Name",
+      "type": "text",
+      "required": "1",
+      "register": "1",
+      "account": "0",
+      "admin": "0",
+      "default_value": "",
+      "placeholder": "",
+      "autocomplete": "given-name",
+      "options": "",
+      "validation": "",
+      "validation_message": ""
+    },
+        {
+      "key": "last_name",
+      "label": "Last Name",
+      "type": "text",
+      "required": "1",
+      "register": "1",
+      "account": "0",
+      "admin": "1",
+      "default_value": "",
+      "placeholder": "",
+      "autocomplete": "family-name",
+      "options": "",
+      "validation": "",
+      "validation_message": ""
+    },
     {
       "key": "billing_phone",
       "label": "Phone",

@@ -68,14 +68,6 @@ The plugin loads first-activation defaults from:
 config/default-fields.json
 ```
 
-The included default JSON defines:
-
-- `billing_phone`
-- `is_affiliated`
-- `is_reseller`
-
-The `is_affiliated` and `is_reseller` fields are checkbox fields, admin-only by default, and default to `0`.
-
 ---
 
 ## JSON import
@@ -101,19 +93,6 @@ The JSON may be either an array of fields or an object with a `fields` array:
 ```
 
 Importing replaces the current field configuration. Existing user values are not overwritten. Missing user values receive the imported default value.
-
----
-
-## Security model
-
-- Field definitions can only be managed by users with `manage_woocommerce`
-- Admin profile fields are only shown/saved for users who can edit the target user and also have `manage_woocommerce` or `edit_users`
-- Fields are not registered as public REST API meta
-- Fields are only rendered on frontend forms when explicitly enabled for registration or account editing
-- JSON import accepts only `.json` files, normalizes every field, and ignores invalid field definitions
-- Default values are only applied when the target user does not already have the meta key
-
----
 
 ## Recommended keys
 
