@@ -46,24 +46,6 @@ msgstr "Campos da Conta"
 msgid "You do not have permission to manage account fields."
 msgstr "Você não tem permissão para gerenciar os campos da conta."
 
-msgid "Full (100%)"
-msgstr "Inteiro (100%)"
-
-msgid "Half (50%)"
-msgstr "Metade (50%)"
-
-msgid "Third (33%)"
-msgstr "Terço (33%)"
-
-msgid "Two thirds (66%)"
-msgstr "Dois terços (66%)"
-
-msgid "Quarter (25%)"
-msgstr "Quarto (25%)"
-
-msgid "Three quarters (75%)"
-msgstr "Três quartos (75%)"
-
 msgid "None"
 msgstr "Nenhuma"
 
@@ -147,9 +129,6 @@ msgstr "Afiliado"
 
 msgid "Type"
 msgstr "Tipo"
-
-msgid "Size"
-msgstr "Tamanho"
 
 msgid "Default value"
 msgstr "Valor padrão"

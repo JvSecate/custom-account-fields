@@ -3,7 +3,7 @@
     float: none !important;
     clear: none !important;
     vertical-align: top;
-    width: var(--caf-field-width, 100%);
+    width: 100%;
     max-width: 100%;
     margin-right: 0;
 }
@@ -13,30 +13,6 @@
 .woocommerce form .form-row.custom-account-field select {
     width: 100%;
     box-sizing: border-box;
-}
-
-.woocommerce form .form-row.custom-account-field[data-caf-size="full"] {
-    width: 100%;
-}
-
-.woocommerce form .form-row.custom-account-field[data-caf-size="half"] {
-    width: calc(48% - 8px);
-}
-
-.woocommerce form .form-row.custom-account-field[data-caf-size="third"] {
-    width: calc(33.3333% - 11px);
-}
-
-.woocommerce form .form-row.custom-account-field[data-caf-size="two-thirds"] {
-    width: calc(66.6666% - 6px);
-}
-
-.woocommerce form .form-row.custom-account-field[data-caf-size="quarter"] {
-    width: calc(25% - 12px);
-}
-
-.woocommerce form .form-row.custom-account-field[data-caf-size="three-quarters"] {
-    width: calc(75% - 4px);
 }
 
 @media (max-width: 768px) {

@@ -41,24 +41,6 @@ msgstr ""
 msgid "You do not have permission to manage account fields."
 msgstr ""
 
-msgid "Full (100%)"
-msgstr ""
-
-msgid "Half (50%)"
-msgstr ""
-
-msgid "Third (33%)"
-msgstr ""
-
-msgid "Two thirds (66%)"
-msgstr ""
-
-msgid "Quarter (25%)"
-msgstr ""
-
-msgid "Three quarters (75%)"
-msgstr ""
-
 msgid "None"
 msgstr ""
 
@@ -141,9 +123,6 @@ msgid "Affiliated"
 msgstr ""
 
 msgid "Type"
-msgstr ""
-
-msgid "Size"
 msgstr ""
 
 msgid "Default value"

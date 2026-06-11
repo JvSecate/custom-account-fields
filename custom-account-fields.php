@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Custom Account Fields
  * Description: Adds configurable customer account fields for WooCommerce registration, account editing, and admin user profiles.
- * Version: 0.3.1
+ * Version: 0.3.2
  * Author: Jv Secate
  * Requires Plugins: woocommerce
  * Text Domain: custom-account-fields
@@ -18,7 +18,7 @@ final class Custom_Account_Fields_Plugin {
     private const VERSION_OPTION = 'custom_account_fields_version';
     private const NONCE_ACTION   = 'custom_account_fields_save';
     private const NONCE_NAME     = 'custom_account_fields_nonce';
-    private const VERSION        = '0.3.1';
+    private const VERSION        = '0.3.2';
 
     private static ?self $instance = null;
 
@@ -179,12 +179,6 @@ final class Custom_Account_Fields_Plugin {
             $type = 'text';
         }
 
-        $allowed_sizes = ['full', 'half', 'third', 'two-thirds', 'quarter', 'three-quarters'];
-        $size = isset($field['size']) ? sanitize_key((string) $field['size']) : 'full';
-        if (!in_array($size, $allowed_sizes, true)) {
-            $size = 'full';
-        }
-
         $allowed_validations = ['', 'phone_br', 'cpf', 'cnpj', 'cpf_cnpj', 'email', 'url', 'cep', 'custom'];
         $validation = isset($field['validation']) ? sanitize_key((string) $field['validation']) : '';
         if (!in_array($validation, $allowed_validations, true)) {
@@ -195,7 +189,6 @@ final class Custom_Account_Fields_Plugin {
             'key'                => $key,
             'label'              => $label,
             'type'               => $type,
-            'size'               => $size,
             'required'           => !empty($field['required']) ? '1' : '0',
             'register'           => !empty($field['register']) ? '1' : '0',
             'account'            => !empty($field['account'])  ? '1' : '0',
@@ -219,24 +212,6 @@ final class Custom_Account_Fields_Plugin {
         return array_values(array_filter($this->get_fields(), static function (array $field) use ($location): bool {
             return !empty($field[$location]) && $field[$location] === '1';
         }));
-    }
-
-    // -------------------------------------------------------------------------
-    // Size helpers
-    // -------------------------------------------------------------------------
-
-    /** @return array{css_value:string, wc_class:string} */
-    private function size_meta(string $size): array {
-        $map = [
-            'full'           => ['css_value' => '100%',     'wc_class' => 'form-row-wide'],
-            'half'           => ['css_value' => '50%',      'wc_class' => 'form-row-first'],
-            'third'          => ['css_value' => '33.3333%', 'wc_class' => 'form-row-wide'],
-            'two-thirds'     => ['css_value' => '66.6666%', 'wc_class' => 'form-row-wide'],
-            'quarter'        => ['css_value' => '25%',      'wc_class' => 'form-row-wide'],
-            'three-quarters' => ['css_value' => '75%',      'wc_class' => 'form-row-wide'],
-        ];
-
-        return $map[$size] ?? $map['full'];
     }
 
     // -------------------------------------------------------------------------
@@ -442,24 +417,14 @@ final class Custom_Account_Fields_Plugin {
         var keyEl   = card.querySelector('[data-caf-key]');
         var labelEl = card.querySelector('[data-caf-label]');
         var typeEl  = card.querySelector('[data-caf-type]');
-        var sizeEl  = card.querySelector('[data-caf-size]');
         var titleEl = card.querySelector('.caf-card-title');
         var metaEl  = card.querySelector('.caf-card-meta');
         if (!titleEl) return;
         var lbl = (labelEl && labelEl.value) ? labelEl.value : ((keyEl && keyEl.value) ? keyEl.value : cafData.newField);
         titleEl.textContent = lbl;
-        if (metaEl && typeEl && sizeEl) {
-            metaEl.textContent = typeEl.value + ' · ' + sizeEl.value;
+        if (metaEl && typeEl) {
+            metaEl.textContent = typeEl.value;
         }
-    }
-
-    function updateSizePreview(card) {
-        var sizeEl  = card.querySelector('[data-caf-size]');
-        var preview = card.querySelector('.caf-size-preview');
-        if (!sizeEl || !preview) return;
-        var map = { full:4, half:2, third:1, 'two-thirds':3, quarter:1, 'three-quarters':3 };
-        var fill = map[sizeEl.value] || 4;
-        preview.querySelectorAll('span').forEach(function (s, i) { s.classList.toggle('active', i < fill); });
     }
 
     function toggleRegexRow(card) {
@@ -478,10 +443,9 @@ final class Custom_Account_Fields_Plugin {
             });
         }
 
-        card.querySelectorAll('[data-caf-key],[data-caf-label],[data-caf-type],[data-caf-size],[data-caf-validation]').forEach(function (el) {
+        card.querySelectorAll('[data-caf-key],[data-caf-label],[data-caf-type],[data-caf-validation]').forEach(function (el) {
             el.addEventListener('change', function () {
                 updateCardTitle(card);
-                updateSizePreview(card);
                 toggleRegexRow(card);
             });
             el.addEventListener('input', function () { updateCardTitle(card); });
@@ -493,8 +457,6 @@ final class Custom_Account_Fields_Plugin {
                 if (confirm(cafData.confirmRemove)) { card.remove(); }
             });
         }
-
-        updateSizePreview(card);
         toggleRegexRow(card);
     }
 
@@ -622,14 +584,6 @@ JS;
         }
 
         $fields = $this->get_fields();
-        $sizes = [
-            'full'           => __('Full (100%)', 'custom-account-fields'),
-            'half'           => __('Half (50%)', 'custom-account-fields'),
-            'third'          => __('Third (33%)', 'custom-account-fields'),
-            'two-thirds'     => __('Two thirds (66%)', 'custom-account-fields'),
-            'quarter'        => __('Quarter (25%)', 'custom-account-fields'),
-            'three-quarters' => __('Three quarters (75%)', 'custom-account-fields'),
-        ];
         $types = ['text', 'email', 'tel', 'number', 'date', 'textarea', 'select', 'checkbox'];
         $validations = [
             ''         => __('None', 'custom-account-fields'),
@@ -663,7 +617,7 @@ JS;
 
                 <div id="caf-fields-list">
                     <?php foreach ($fields as $index => $field) : ?>
-                        <?php $this->render_admin_card($index, $field, $sizes, $types, $validations); ?>
+                        <?php $this->render_admin_card($index, $field, $types, $validations); ?>
                     <?php endforeach; ?>
                 </div>
 
@@ -687,7 +641,6 @@ JS;
                 'key'                => '',
                 'label'              => '',
                 'type'               => 'text',
-                'size'               => 'full',
                 'required'           => '0',
                 'register'           => '0',
                 'account'            => '0',
@@ -699,7 +652,7 @@ JS;
                 'validation'         => '',
                 'validation_regex'   => '',
                 'validation_message' => '',
-            ], $sizes, $types, $validations); ?>
+            ], $types, $validations); ?>
         </template>
 
         <script>
@@ -712,11 +665,10 @@ JS;
     }
 
     /** @param int|string $index */
-    private function render_admin_card($index, array $field, array $sizes, array $types, array $validations): void {
+    private function render_admin_card($index, array $field, array $types, array $validations): void {
         $n = 'fields[' . esc_attr((string) $index) . ']';
-        $size = $field['size'] ?? 'full';
         $label = $field['label'] !== '' ? $field['label'] : ($field['key'] !== '' ? $field['key'] : esc_html__('(new field)', 'custom-account-fields'));
-        $meta = esc_html(($field['type'] ?? 'text') . ' · ' . $size);
+        $meta = esc_html($field['type'] ?? 'text');
         ?>
         <div class="caf-field-card" draggable="true">
             <div class="caf-field-card-header">
@@ -746,17 +698,6 @@ JS;
                         <?php endforeach; ?>
                     </select>
                 </div>
-
-                <div class="caf-form-group">
-                    <label><?php esc_html_e('Size', 'custom-account-fields'); ?></label>
-                    <select name="<?php echo $n; ?>[size]" data-caf-size>
-                        <?php foreach ($sizes as $value => $label_text) : ?>
-                            <option value="<?php echo esc_attr($value); ?>" <?php selected($size, $value); ?>><?php echo esc_html($label_text); ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                    <div class="caf-size-preview" aria-hidden="true"><?php for ($i = 0; $i < 4; $i++) : ?><span></span><?php endfor; ?></div>
-                </div>
-
                 <div class="caf-form-group">
                     <label><?php esc_html_e('Default value', 'custom-account-fields'); ?> <span class="caf-tip" data-tip="<?php esc_attr_e('Applied to new users and to existing users that do not yet have this meta key. For checkboxes, use 1 or 0.', 'custom-account-fields'); ?>">&#9432;</span></label>
                     <input type="text" name="<?php echo $n; ?>[default_value]" value="<?php echo esc_attr((string) ($field['default_value'] ?? '')); ?>" placeholder="0" />
@@ -844,10 +785,7 @@ JS;
         $required = $field['required'] === '1';
         $field_id = 'caf_' . $context . '_' . $key;
         $required_html = $required ? ' <span class="required">*</span>' : '';
-        $size_meta = $this->size_meta((string) ($field['size'] ?? 'full'));
-        $inline_style = '--caf-field-width:' . esc_attr($size_meta['css_value']) . ';';
-
-        echo '<p class="form-row ' . esc_attr($size_meta['wc_class']) . ' custom-account-field custom-account-field--' . esc_attr($key) . '" style="' . esc_attr($inline_style) . '" data-caf-size="' . esc_attr((string) ($field['size'] ?? 'full')) . '">';
+        echo '<p class="form-row form-row-wide custom-account-field custom-account-field--' . esc_attr($key) . '">';
         echo '<label for="' . esc_attr($field_id) . '">' . esc_html((string) $field['label']) . $required_html . '</label>';
         $this->render_field_input($field, $field_id, $value, $required, 'input-text');
         echo '</p>';

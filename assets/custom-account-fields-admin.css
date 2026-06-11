@@ -44,11 +44,6 @@
     width:220px; pointer-events:none; opacity:0; transition:opacity .15s; z-index:9999; }
 .caf-tip:hover::after { opacity:1; }
 
-/* Size preview */
-.caf-size-preview { display:flex; gap:3px; align-items:center; margin-top:4px; height:8px; }
-.caf-size-preview span { height:8px; border-radius:2px; background:#7f54b3; opacity:.25; flex:1; }
-.caf-size-preview span.active { opacity:1; }
-
 /* Remove button */
 .caf-field-card-header .button-link-delete { color:#b32d2e; }
 
