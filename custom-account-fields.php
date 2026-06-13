@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Custom Account Fields
  * Description: Adds configurable customer account fields for WooCommerce registration, account editing, and admin user profiles.
- * Version: 0.3.2
+ * Version: 0.3.3
  * Author: Jv Secate
  * Requires Plugins: woocommerce
  * Text Domain: custom-account-fields
@@ -20,7 +20,7 @@ final class Custom_Account_Fields_Plugin {
     private const VERSION_OPTION = 'custom_account_fields_version';
     private const NONCE_ACTION   = 'custom_account_fields_save';
     private const NONCE_NAME     = 'custom_account_fields_nonce';
-    private const VERSION        = '0.3.2';
+    private const VERSION        = '0.3.3';
 
     private static ?self $instance = null;
 
@@ -923,7 +923,7 @@ JS;
         return $errors;
     }
 
-    public function validate_account_fields(WP_Error $errors, WP_User $user): void {
+    public function validate_account_fields(WP_Error $errors, $user): void {
         foreach ($this->fields_for_location('account') as $field) {
             $this->validate_posted_field($errors, $field);
         }
