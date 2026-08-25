@@ -1,183 +1,292 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Custom Account Fields 0.4.0\n"
+"Project-Id-Version: Custom Account Fields 0.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-10 00:00+0000\n"
-"PO-Revision-Date: 2026-06-10 00:00+0000\n"
-"Last-Translator: Jv Secate <main.jvsecate@gmail.com>\n"
-"Language-Team: Portuguese (Brazil)\n"
-"Language: pt_BR\n"
+"POT-Creation-Date: 2026-08-24 00:00-0300\n"
+"PO-Revision-Date: 2026-08-24 00:00-0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: ChatGPT\n"
-"X-Domain: custom-account-fields\n"
+"X-Generator: scripts/generate-plugin-translations.py\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-msgid "%s must be a valid phone number (example: (11) 91234-5678)."
-msgstr "%s deve ser um número de telefone válido (ex: (11) 91234-5678)."
-
-msgid "%s must be a valid CPF."
-msgstr "%s deve ser um CPF válido."
-
-msgid "%s must be a valid CNPJ."
-msgstr "%s deve ser um CNPJ válido."
-
-msgid "%s must be a valid CPF or CNPJ."
-msgstr "%s deve ser um CPF ou CNPJ válido."
-
-msgid "%s must be a valid email address."
-msgstr "%s deve ser um e-mail válido."
-
-msgid "%s must be a valid URL."
-msgstr "%s deve ser uma URL válida."
-
-msgid "%s must be a valid postal code (example: 01310-100)."
-msgstr "%s deve ser um CEP válido (ex: 01310-100)."
-
+#: custom-account-fields/custom-account-fields.php:293
 msgid "%s has an invalid format."
 msgstr "%s possui um formato inválido."
 
+#: custom-account-fields/custom-account-fields.php:299
 msgid "%s is invalid."
 msgstr "%s é inválido."
 
-msgid "Account Fields"
-msgstr "Campos da Conta"
-
-msgid "You do not have permission to manage account fields."
-msgstr "Você não tem permissão para gerenciar os campos da conta."
-
-msgid "None"
-msgstr "Nenhuma"
-
-msgid "Brazilian phone"
-msgstr "Telefone BR"
-
-msgid "CPF"
-msgstr "CPF"
-
-msgid "CNPJ"
-msgstr "CNPJ"
-
-msgid "CPF / CNPJ"
-msgstr "CPF / CNPJ"
-
-msgid "Email"
-msgstr "E-mail"
-
-msgid "URL"
-msgstr "URL"
-
-msgid "CEP"
-msgstr "CEP"
-
-msgid "Custom regex"
-msgstr "Regex personalizado"
-
-msgid "Configure account fields for registration, account editing, and admin user profiles."
-msgstr "Configure campos de conta para registro, edição de conta e perfis de usuário no admin."
-
-msgid "Fields saved successfully. Missing user values were filled with each field default."
-msgstr "Campos salvos com sucesso. Valores ausentes dos usuários foram preenchidos com o padrão de cada campo."
-
-msgid "Fields imported successfully. Missing user values were filled with each field default."
-msgstr "Campos importados com sucesso. Valores ausentes dos usuários foram preenchidos com o padrão de cada campo."
-
-msgid "The JSON import failed. Check that the file is valid JSON and contains field definitions."
-msgstr "A importação do JSON falhou. Verifique se o arquivo é um JSON válido e contém definições de campos."
-
-msgid "Add field"
-msgstr "Adicionar campo"
-
-msgid "Save fields"
-msgstr "Salvar campos"
-
-msgid "Fields not enabled for registration or account editing stay private to the admin user profile UI."
-msgstr "Campos não habilitados para registro ou edição de conta permanecem privados na interface de perfil de usuário do admin."
-
-msgid "Import fields from JSON"
-msgstr "Importar campos de JSON"
-
-msgid "Import replaces the current field configuration. Existing user values are not overwritten; missing values receive the imported default value."
-msgstr "A importação substitui a configuração atual de campos. Valores existentes dos usuários não são sobrescritos; valores ausentes recebem o valor padrão importado."
-
-msgid "Import JSON"
-msgstr "Importar JSON"
-
-msgid "Remove this field?"
-msgstr "Remover este campo?"
-
-msgid "(new field)"
-msgstr "(novo campo)"
-
-msgid "Drag"
-msgstr "Arrastar"
-
-msgid "Remove field"
-msgstr "Remover campo"
-
-msgid "Key (meta key)"
-msgstr "Chave (meta key)"
-
-msgid "Unique identifier used to save the user meta value. Example: is_affiliated."
-msgstr "Identificador único usado para salvar o valor no meta do usuário. Exemplo: is_affiliated."
-
-msgid "Label"
-msgstr "Rótulo"
-
-msgid "Affiliated"
-msgstr "Afiliado"
-
-msgid "Type"
-msgstr "Tipo"
-
-msgid "Default value"
-msgstr "Valor padrão"
-
-msgid "Applied to new users and to existing users that do not yet have this meta key. For checkboxes, use 1 or 0."
-msgstr "Aplicado a novos usuários e a usuários existentes que ainda não possuem esta chave meta. Para checkboxes, use 1 ou 0."
-
-msgid "Validation"
-msgstr "Validação"
-
-msgid "Regex"
-msgstr "Regex"
-
-msgid "Error message"
-msgstr "Mensagem de erro"
-
-msgid "Placeholder"
-msgstr "Placeholder"
-
-msgid "Autocomplete"
-msgstr "Autocomplete"
-
-msgid "Select options"
-msgstr "Opções do select"
-
-msgid "Display in"
-msgstr "Exibir em"
-
-msgid "Required"
-msgstr "Obrigatório"
-
-msgid "Registration"
-msgstr "Registro"
-
-msgid "Account editing"
-msgstr "Edição de conta"
-
-msgid "Admin user profile"
-msgstr "Perfil de usuário no admin"
-
-msgid "Additional information"
-msgstr "Informações adicionais"
-
-msgid "Custom account fields"
-msgstr "Campos personalizados da conta"
-
-msgid "Select"
-msgstr "Selecione"
-
+#: custom-account-fields/custom-account-fields.php:907
 msgid "%s is required."
 msgstr "%s é obrigatório."
 
+#: custom-account-fields/custom-account-fields.php:253
+msgid "%s must be a valid CNPJ."
+msgstr "%s deve ser um CNPJ válido."
+
+#: custom-account-fields/custom-account-fields.php:262
+msgid "%s must be a valid CPF or CNPJ."
+msgstr "%s deve ser um CPF ou CNPJ válido."
+
+#: custom-account-fields/custom-account-fields.php:246
+msgid "%s must be a valid CPF."
+msgstr "%s deve ser um CPF válido."
+
+#: custom-account-fields/custom-account-fields.php:269
+msgid "%s must be a valid email address."
+msgstr "%s deve ser um e-mail válido."
+
+#: custom-account-fields/custom-account-fields.php:239
+msgid "%s must be a valid phone number (example: (11) 91234-5678)."
+msgstr "%s deve ser um número de telefone válido (ex: (11) 91234-5678)."
+
+#: custom-account-fields/custom-account-fields.php:284
+msgid "%s must be a valid postal code (example: 01310-100)."
+msgstr "%s deve ser um CEP válido (ex: 01310-100)."
+
+#: custom-account-fields/custom-account-fields.php:276
+msgid "%s must be a valid URL."
+msgstr "%s deve ser uma URL válida."
+
+#: custom-account-fields/custom-account-fields.php:663 custom-account-fields/custom-account-fields.php:672
+msgid "(new field)"
+msgstr "(novo campo)"
+
+#: custom-account-fields/custom-account-fields.php:747
+msgid "Account editing"
+msgstr "Edição de conta"
+
+#: custom-account-fields/custom-account-fields.php:354 custom-account-fields/custom-account-fields.php:355 custom-account-fields/custom-account-fields.php:604
+msgid "Account Fields"
+msgstr "Campos da Conta"
+
+#: custom-account-fields/custom-account-fields.php:627
+msgid "Add field"
+msgstr "Adicionar campo"
+
+#: custom-account-fields/custom-account-fields.php:772
+msgid "Additional information"
+msgstr "Informações adicionais"
+
+#: custom-account-fields/custom-account-fields.php
+msgid "Adds configurable customer account fields for WooCommerce registration, account editing, and admin user profiles."
+msgstr "Adiciona campos configuráveis de conta ao cadastro, edição de conta e perfis administrativos do WooCommerce."
+
+#: custom-account-fields/custom-account-fields.php:748
+msgid "Admin user profile"
+msgstr "Perfil de usuário no admin"
+
+#: custom-account-fields/custom-account-fields.php:692
+msgid "Affiliated"
+msgstr "Afiliado"
+
+#: custom-account-fields/custom-account-fields.php:704
+msgid "Applied to new users and to existing users that do not yet have this meta key. For checkboxes, use 1 or 0."
+msgstr "Aplicado a novos usuários e a usuários existentes que ainda não possuem esta chave meta. Para checkboxes, use 1 ou 0."
+
+#: custom-account-fields/custom-account-fields.php:733
+msgid "Autocomplete"
+msgstr "Autocomplete"
+
+#: custom-account-fields/custom-account-fields.php:592
+msgid "Brazilian phone"
+msgstr "Telefone BR"
+
+#: custom-account-fields/custom-account-fields.php:384
+msgid "Campo obrigatório."
+msgstr "Campo obrigatório."
+
+#: custom-account-fields/custom-account-fields.php:598
+msgid "CEP"
+msgstr "CEP"
+
+#: custom-account-fields/custom-account-fields.php:594
+msgid "CNPJ"
+msgstr "CNPJ"
+
+#: custom-account-fields/custom-account-fields.php:607
+msgid "Configure account fields for registration, account editing, and admin user profiles."
+msgstr "Configure campos de conta para registro, edição de conta e perfis de usuário no admin."
+
+#: custom-account-fields/custom-account-fields.php:593
+msgid "CPF"
+msgstr "CPF"
+
+#: custom-account-fields/custom-account-fields.php:595
+msgid "CPF / CNPJ"
+msgstr "CPF / CNPJ"
+
+#: custom-account-fields/custom-account-fields.php
+msgid "Custom Account Fields"
+msgstr "Campos Personalizados da Conta"
+
+#: custom-account-fields/custom-account-fields.php:810
+msgid "Custom account fields"
+msgstr "Campos personalizados da conta"
+
+#: custom-account-fields/custom-account-fields.php:599
+msgid "Custom regex"
+msgstr "Regex personalizado"
+
+#: custom-account-fields/custom-account-fields.php:704
+msgid "Default value"
+msgstr "Valor padrão"
+
+#: custom-account-fields/custom-account-fields.php:743
+msgid "Display in"
+msgstr "Exibir em"
+
+#: custom-account-fields/custom-account-fields.php:677
+msgid "Drag"
+msgstr "Arrastar"
+
+#: custom-account-fields/custom-account-fields.php:596
+msgid "Email"
+msgstr "E-mail"
+
+#: custom-account-fields/custom-account-fields.php:723
+msgid "Error message"
+msgstr "Mensagem de erro"
+
+#: custom-account-fields/custom-account-fields.php:612
+msgid "Fields imported successfully. Missing user values were filled with each field default."
+msgstr "Campos importados com sucesso. Valores ausentes dos usuários foram preenchidos com o padrão de cada campo."
+
+#: custom-account-fields/custom-account-fields.php:629
+msgid "Fields not enabled for registration or account editing stay private to the admin user profile UI."
+msgstr "Campos não habilitados para registro ou edição de conta permanecem privados na interface de perfil de usuário do admin."
+
+#: custom-account-fields/custom-account-fields.php:610
+msgid "Fields saved successfully. Missing user values were filled with each field default."
+msgstr "Campos salvos com sucesso. Valores ausentes dos usuários foram preenchidos com o padrão de cada campo."
+
+#: custom-account-fields/custom-account-fields.php:394
+msgid "Formato inválido."
+msgstr "Formato inválido."
+
+#: custom-account-fields/custom-account-fields.php:633
+msgid "Import fields from JSON"
+msgstr "Importar campos de JSON"
+
+#: custom-account-fields/custom-account-fields.php:636
+msgid "Import JSON"
+msgstr "Importar JSON"
+
+#: custom-account-fields/custom-account-fields.php:634
+msgid "Import replaces the current field configuration. Existing user values are not overwritten; missing values receive the imported default value."
+msgstr "A importação substitui a configuração atual de campos. Valores existentes dos usuários não são sobrescritos; valores ausentes recebem o valor padrão importado."
+
+#: custom-account-fields/custom-account-fields.php:393
+msgid "Informe um CEP válido."
+msgstr "Informe um CEP válido."
+
+#: custom-account-fields/custom-account-fields.php:391
+msgid "Informe um CNPJ válido."
+msgstr "Informe um CNPJ válido."
+
+#: custom-account-fields/custom-account-fields.php:392
+msgid "Informe um CPF ou CNPJ válido."
+msgstr "Informe um CPF ou CNPJ válido."
+
+#: custom-account-fields/custom-account-fields.php:390
+msgid "Informe um CPF válido."
+msgstr "Informe um CPF válido."
+
+#: custom-account-fields/custom-account-fields.php:385
+msgid "Informe um e-mail válido."
+msgstr "Informe um e-mail válido."
+
+#: custom-account-fields/custom-account-fields.php:388
+msgid "Informe um número válido."
+msgstr "Informe um número válido."
+
+#: custom-account-fields/custom-account-fields.php:387
+msgid "Informe um telefone válido."
+msgstr "Informe um telefone válido."
+
+#: custom-account-fields/custom-account-fields.php:389
+msgid "Informe uma data válida."
+msgstr "Informe uma data válida."
+
+#: custom-account-fields/custom-account-fields.php:386
+msgid "Informe uma URL válida."
+msgstr "Informe uma URL válida."
+
+#: custom-account-fields/custom-account-fields.php:686
+msgid "Key (meta key)"
+msgstr "Chave (meta key)"
+
+#: custom-account-fields/custom-account-fields.php:691
+msgid "Label"
+msgstr "Rótulo"
+
+#: custom-account-fields/custom-account-fields.php:591
+msgid "None"
+msgstr "Nenhuma"
+
+#: custom-account-fields/custom-account-fields.php:728
+msgid "Placeholder"
+msgstr "Placeholder"
+
+#: custom-account-fields/custom-account-fields.php:718
+msgid "Regex"
+msgstr "Regex"
+
+#: custom-account-fields/custom-account-fields.php:746
+msgid "Registration"
+msgstr "Registro"
+
+#: custom-account-fields/custom-account-fields.php:681
+msgid "Remove field"
+msgstr "Remover campo"
+
+#: custom-account-fields/custom-account-fields.php:662
+msgid "Remove this field?"
+msgstr "Remover este campo?"
+
+#: custom-account-fields/custom-account-fields.php:745
+msgid "Required"
+msgstr "Obrigatório"
+
+#: custom-account-fields/custom-account-fields.php:628
+msgid "Save fields"
+msgstr "Salvar campos"
+
+#: custom-account-fields/custom-account-fields.php:880
+msgid "Select"
+msgstr "Selecione"
+
+#: custom-account-fields/custom-account-fields.php:738
+msgid "Select options"
+msgstr "Opções do select"
+
+#: custom-account-fields/custom-account-fields.php:614
+msgid "The JSON import failed. Check that the file is valid JSON and contains field definitions."
+msgstr "A importação do JSON falhou. Verifique se o arquivo é um JSON válido e contém definições de campos."
+
+#: custom-account-fields/custom-account-fields.php:696
+msgid "Type"
+msgstr "Tipo"
+
+#: custom-account-fields/custom-account-fields.php:686
+msgid "Unique identifier used to save the user meta value. Example: is_affiliated."
+msgstr "Identificador único usado para salvar o valor no meta do usuário. Exemplo: is_affiliated."
+
+#: custom-account-fields/custom-account-fields.php:597
+msgid "URL"
+msgstr "URL"
+
+#: custom-account-fields/custom-account-fields.php:709
+msgid "Validation"
+msgstr "Validação"
+
+#: custom-account-fields/custom-account-fields.php:395
+msgid "Verifique este campo."
+msgstr "Verifique este campo."
+
+#: custom-account-fields/custom-account-fields.php:512
+msgid "You do not have permission to manage account fields."
+msgstr "Você não tem permissão para gerenciar os campos da conta."
