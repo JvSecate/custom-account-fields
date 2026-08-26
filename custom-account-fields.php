@@ -360,16 +360,16 @@ final class Custom_Account_Fields_Plugin {
     }
 
     public function enqueue_frontend_assets(): void {
+        if (function_exists('is_account_page') && !is_account_page()) {
+            return;
+        }
+
         wp_enqueue_style(
             'custom-account-fields-frontend',
             plugin_dir_url(__FILE__) . 'assets/custom-account-fields-frontend.css',
             [],
             self::VERSION
         );
-
-        if (function_exists('is_account_page') && !is_account_page()) {
-            return;
-        }
 
         wp_enqueue_script(
             'custom-account-fields-frontend',
